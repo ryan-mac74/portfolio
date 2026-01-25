@@ -86,7 +86,7 @@ const Index: React.FC = () => {
                 </li>
                 <li>
                   <a 
-                    href="/public/resume.pdf" 
+                    href="/resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="cta-button-premium text-sm px-4 py-1"
