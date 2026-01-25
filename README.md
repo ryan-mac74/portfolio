@@ -71,12 +71,12 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgements
+## ♥️ Acknowledgements
 
 This project is based on and inspired by the following open-source repository:
 
-- **[PortfolioTemplate](https://github.com/ResorcinolWorks/PortfolioTemplate)** by *Ayush Raghuvanshi*
-
+- **[PortfolioTemplate](https://github.com/ResorcinolWorks/PortfolioTemplate)**
+    by *[Ayush Raghuvanshi](https://github.com/ResorcinolWorks)*
 
 The original project provided the foundation for this work.  
 This repository includes modifications, extensions, and personal improvements made for my own purposes.
