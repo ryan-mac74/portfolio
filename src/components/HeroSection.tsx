@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { toast } from 'sonner';
 
 const HeroSection: React.FC = () => {
   const textVariants = {
@@ -74,7 +74,11 @@ const HeroSection: React.FC = () => {
         >
           <a 
             href="#projects" 
-            className="cta-button-premium group inline-flex items-center gap-2"
+            className="cta-button-premium group inline-flex items-center gap-2" 
+            onClick={(e) => {
+              e.preventDefault();
+              toast("The Projects section is currently under development.");
+            }}
           >
             <span>View Projects</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

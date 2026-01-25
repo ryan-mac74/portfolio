@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Instagram, Phone } from 'lucide-react';
@@ -56,7 +55,7 @@ const ContactSection: React.FC = () => {
       
       <div className="max-w-4xl mx-auto relative z-10">
         <motion.h2 
-          className="section-heading relative"
+          className="section-heading relative ml-[32%] md:ml-[12%]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -72,8 +71,9 @@ const ContactSection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <p className="text-lg mb-6 text-white/80">
-              Have a project in mind or just wanna chat? Feel free to reach out.
+            <p className="text-lg mb-6 text-white/80 text-center">
+              Have a project in mind or just wanna chat? <br />
+              Feel free to reach out.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -116,13 +116,15 @@ const ContactSection: React.FC = () => {
                 <div className="absolute inset-0 rounded-md bg-white/5 opacity-0 group-hover:opacity-100 blur-sm transition-opacity -z-10"></div>
               </div>
               
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="cta-button disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="cta-button disabled:opacity-50 disabled:cursor-not-allowed w-1/2"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </div>
             </form>
           </motion.div>
           
@@ -165,6 +167,8 @@ const ContactSection: React.FC = () => {
                   <Github className="w-5 h-5 group-hover:text-white transition-colors" />
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
+                { /*
+                
                 <a 
                   href="https://www.instagram.com/ryan_mac_4" 
                   target="_blank" 
@@ -189,6 +193,8 @@ const ContactSection: React.FC = () => {
                   <Phone className="w-5 h-5 group-hover:text-white transition-colors" />
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
+
+                */ }
               </div>
               
               <div className="text-center relative z-10">

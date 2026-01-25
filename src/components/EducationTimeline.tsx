@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 
@@ -29,7 +28,7 @@ const EducationTimeline: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
+    <section id="education" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
         <motion.h2 
           className="section-heading"

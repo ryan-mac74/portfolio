@@ -1,5 +1,5 @@
-
 import React from 'react';
+import { toast } from 'sonner';
 import { motion, AnimatePresence } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import TechMarquee from '@/components/TechMarquee';
@@ -69,17 +69,48 @@ const Index: React.FC = () => {
         
         <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold italic">Ryan Mac</h1>
-            <nav className="hidden md:block">
+            <h1 
+              className="text-xl font-bold italic cursor-pointer" 
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.pushState(null, "", "/#");
+              }}
+            >
+              Ryan Mac
+            </h1>
+            <nav>
               <ul className="flex space-x-8">
                 <li>
-                  <a href="#projects" className="hover:text-white transition-colors relative group">
+                  <a 
+                    href="#projects" 
+                    className="hover:text-white transition-colors relative group" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toast("The Projects section is currently under development.");
+                    }}
+                  >
                     Projects
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-white transition-colors relative group">
+                  <a 
+                    href="#education" 
+                    className="hover:text-white transition-colors relative group" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      toast("The Education section is currently under development.");
+                    }}
+                  >
+                    Education
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact" 
+                    className="hover:text-white transition-colors relative group"
+                  >
                     Contact
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
                   </a>

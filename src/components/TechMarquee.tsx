@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 const TechMarquee: React.FC = () => {
-  const iconClass = "w-5 h-5 mr-2";
+  const iconClass = "w-6 h-6 mr-3 flex-shrink-0";
 
   const techStackRow1 = [
     { name: "React", icon: <Code2 className={iconClass} /> },
@@ -15,13 +15,10 @@ const TechMarquee: React.FC = () => {
     { name: "Next.js", icon: <Code2 className={iconClass} /> },
     { name: "Node.js", icon: <ServerCrash className={iconClass} /> },
     { name: "FastAPI", icon: <Cpu className={iconClass} /> },
+    { name: "Docker", icon: <Container className={iconClass} /> },
     { name: "MySQL", icon: <Database className={iconClass} /> },
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
-    { name: "Docker", icon: <Container className={iconClass} /> },
   ];
-
-  { /* name: "TailwindCSS", icon: <Paintbrush className={iconClass} /> */ }
-  { /* name: "AWS", icon: <Cloud className={iconClass} /> */ }
   
   const techStackRow2 = [
     { name: "Python", icon: <Terminal className={iconClass} /> },
@@ -30,17 +27,16 @@ const TechMarquee: React.FC = () => {
     { name: "TypeScript", icon: <Code2 className={iconClass} /> },
     { name: "HTML", icon: <Code2 className={iconClass} /> },
     { name: "CSS", icon: <Paintbrush className={iconClass} /> },
+    { name: "TailwindCSS", icon: <Paintbrush className={iconClass} /> },
     { name: "GitHub", icon: <Github className={iconClass} /> },
     { name: "VS Code", icon: <Terminal className={iconClass} /> },
+    { name: "Emacs", icon: <Terminal className={iconClass} /> },
   ];
-
-  { /* name: "Redis", icon: <Database className={iconClass} /> */ }
-  { /* name: "Kubernetes", icon: <Layers className={iconClass} /> */ }
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
     // if a seamless continuous scroll isn't needed, no duplication needed.
     return items.map((tech, index) => (
-      <span key={index} className="tech-badge-premium mx-5 flex items-center">
+      <span key={index} className="tech-badge-premium mx-5 flex items-center px-6 py-3 min-w-fit">
         {tech.icon}
         {tech.name}
       </span>

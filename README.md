@@ -75,7 +75,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This project is based on and inspired by the following open-source repository:
 
-- **[Ayush Raghuvanshi](https://github.com/ResorcinolWorks/PortfolioTemplate)**
+- **[PortfolioTemplate](https://github.com/ResorcinolWorks/PortfolioTemplate)** by *Ayush Raghuvanshi*
+
 
 The original project provided the foundation for this work.  
 This repository includes modifications, extensions, and personal improvements made for my own purposes.
