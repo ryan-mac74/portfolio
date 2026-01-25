@@ -76,7 +76,7 @@ const Index: React.FC = () => {
                 window.history.pushState(null, "", "/#");
               }}
             >
-              Ryan Mac
+              Ryan <br className="md:hidden" /> Mac
             </h1>
             <nav>
               <ul className="flex space-x-8">

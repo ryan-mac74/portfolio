@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
             custom={1}
             variants={textVariants}
           >
-            turning ideas into reality
+            turning Ideas into Reality
           </motion.span>
         </motion.h1>
         
