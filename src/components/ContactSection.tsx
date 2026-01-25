@@ -123,33 +123,7 @@ const ContactSection: React.FC = () => {
               
               <div className="flex space-x-6 mb-6">
                 <a 
-                  href="https://github.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
-                  style={{
-                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
-                  }}
-                >
-                  <Github className="w-5 h-5 group-hover:text-white transition-colors" />
-                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
-                </a>
-                
-                <a 
-                  href="https://twitter.com/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
-                  style={{
-                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
-                  }}
-                >
-                  <Twitter className="w-5 h-5 group-hover:text-white transition-colors" />
-                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
-                </a>
-                
-                <a 
-                  href="https://linkedin.com/" 
+                  href="https://www.linkedin.com/in/ryan-ramaherison-mac-way-kit-bb7244351/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
@@ -158,6 +132,18 @@ const ContactSection: React.FC = () => {
                   }}
                 >
                   <Linkedin className="w-5 h-5 group-hover:text-white transition-colors" />
+                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
+                </a>
+                <a 
+                  href="https://github.com/ryan-mac74" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
+                  style={{
+                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  <Github className="w-5 h-5 group-hover:text-white transition-colors" />
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
               </div>

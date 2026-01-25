@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
             custom={0}
             variants={textVariants}
           >
-            Hi, I'm Ryan Mac —
+            Hey! I'm Ryan Mac —
           </motion.span>{" "}
           <motion.span 
             className="inline-block hero-text-gradient"
@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
             custom={1}
             variants={textVariants}
           >
-            turning ideas into powerful digital products.
+            turning ideas into reality
           </motion.span>
         </motion.h1>
         
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Building robust solutions with code and design.
+          "The people who are crazy enough to think they can change the world are the ones who do" - Steve Jobs 💥🌎
         </motion.p>
         
         <motion.div

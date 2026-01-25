@@ -1,31 +1,41 @@
 import React from 'react';
 import { 
   Github, Code2, Database, 
-  ServerCrash, Container, Cpu, Cloud, Terminal, 
-  Paintbrush, Layers 
+  ServerCrash, Container, 
+  Cpu, Cloud, Terminal, 
+  Paintbrush, Layers, Zap 
 } from 'lucide-react';
 
 const TechMarquee: React.FC = () => {
+  const iconClass = "w-5 h-5 mr-2";
+
   const techStackRow1 = [
-    { name: "React", icon: <Code2 className="w-5 h-5 mr-2" /> },
-    { name: "Next.js", icon: <Code2 className="w-5 h-5 mr-2" /> },
-    { name: "Node.js", icon: <ServerCrash className="w-5 h-5 mr-2" /> },
-    { name: "TailwindCSS", icon: <Paintbrush className="w-5 h-5 mr-2" /> },
-    { name: "PostgreSQL", icon: <Database className="w-5 h-5 mr-2" /> },
-    { name: "AWS", icon: <Cloud className="w-5 h-5 mr-2" /> },
-    { name: "Docker", icon: <Container className="w-5 h-5 mr-2" /> },
-    { name: "GraphQL", icon: <Cpu className="w-5 h-5 mr-2" /> }
+    { name: "React", icon: <Code2 className={iconClass} /> },
+    { name: "Vite", icon: <Zap className={iconClass} /> },
+    { name: "Next.js", icon: <Code2 className={iconClass} /> },
+    { name: "Node.js", icon: <ServerCrash className={iconClass} /> },
+    { name: "FastAPI", icon: <Cpu className={iconClass} /> },
+    { name: "MySQL", icon: <Database className={iconClass} /> },
+    { name: "PostgreSQL", icon: <Database className={iconClass} /> },
+    { name: "Docker", icon: <Container className={iconClass} /> },
   ];
+
+  { /* name: "TailwindCSS", icon: <Paintbrush className={iconClass} /> */ }
+  { /* name: "AWS", icon: <Cloud className={iconClass} /> */ }
   
   const techStackRow2 = [
-    { name: "Java", icon: <Cpu className="w-5 h-5 mr-2" /> },
-    { name: "Python", icon: <Terminal className="w-5 h-5 mr-2" /> },
-    { name: "TypeScript", icon: <Code2 className="w-5 h-5 mr-2" /> },
-    { name: "MongoDB", icon: <Database className="w-5 h-5 mr-2" /> },
-    { name: "Redis", icon: <Database className="w-5 h-5 mr-2" /> },
-    { name: "Kubernetes", icon: <Layers className="w-5 h-5 mr-2" /> },
-    { name: "GitHub Actions", icon: <Github className="w-5 h-5 mr-2" /> }
+    { name: "Python", icon: <Terminal className={iconClass} /> },
+    { name: "Java", icon: <Cpu className={iconClass} /> },
+    { name: "JavaScript", icon: <Code2 className={iconClass} /> },
+    { name: "TypeScript", icon: <Code2 className={iconClass} /> },
+    { name: "HTML", icon: <Code2 className={iconClass} /> },
+    { name: "CSS", icon: <Paintbrush className={iconClass} /> },
+    { name: "GitHub", icon: <Github className={iconClass} /> },
+    { name: "VS Code", icon: <Terminal className={iconClass} /> },
   ];
+
+  { /* name: "Redis", icon: <Database className={iconClass} /> */ }
+  { /* name: "Kubernetes", icon: <Layers className={iconClass} /> */ }
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
     // if a seamless continuous scroll isn't needed, no duplication needed.
