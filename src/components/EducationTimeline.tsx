@@ -25,13 +25,6 @@ const EducationTimeline: React.FC = () => {
       degree: "Higher Secondary Education",
       institution: "XX School",
       grade: "Percentage: XX%"
-    },
-    {
-      id: 3,
-      years: "201X–202X",
-      degree: "Secondary Education",
-      institution: "Delhi Public School",
-      grade: "CGPA: XX/10"
     }
   ];
 

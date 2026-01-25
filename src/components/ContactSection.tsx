@@ -1,8 +1,9 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Instagram, Phone } from 'lucide-react';
 import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
 
 const ContactSection: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,12 +23,30 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    // Send email using EmailJS
+    emailjs.send(
+      'service_w4zo1kf',
+      'template_om9rdqq',
+      {
+        subject: 'My Portfolio',
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'ryan.mac.rm4@gmail.com'
+      },
+      'IXFH47cUfkSLXooAS'
+    )
+    .then(() => {
       toast.success('Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
+    })
+    .catch((error) => {
+      console.error('Email error:', error);
+      toast.error(`Failed to send message. Please try again!`);
+    })
+    .finally(() => {
       setIsSubmitting(false);
-    }, 1500);
+    });
   };
 
   return (
@@ -54,7 +73,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="text-lg mb-6 text-white/80">
-              Have a project in mind or just want to chat? Feel free to reach out.
+              Have a project in mind or just wanna chat? Feel free to reach out.
             </p>
             
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -144,6 +163,30 @@ const ContactSection: React.FC = () => {
                   }}
                 >
                   <Github className="w-5 h-5 group-hover:text-white transition-colors" />
+                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
+                </a>
+                <a 
+                  href="https://www.instagram.com/ryan_mac_4" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
+                  style={{
+                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  <Instagram className="w-5 h-5 group-hover:text-white transition-colors" />
+                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
+                </a>
+                <a 
+                  href="https://wa.me/14389262702" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
+                  style={{
+                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
+                  }}
+                >
+                  <Phone className="w-5 h-5 group-hover:text-white transition-colors" />
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
               </div>

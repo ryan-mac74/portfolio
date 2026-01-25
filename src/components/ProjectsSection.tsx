@@ -17,42 +17,42 @@ const ProjectsSection: React.FC = () => {
     {
       id: 1,
       title: "Project 1",
-      description: "xyz",
+      description: "abc",
       techStack: ["React", "Node.js", "Express"],
       url: "#"
     },
     {
       id: 2,
       title: "Project 2",
-      description: "abc",
+      description: "def",
       techStack: ["Vue.js", "Django", "MongoDB"],
       url: "#"
     },
     {
       id: 3,
       title: "Project 3",
-      description: "123",
+      description: "ghi",
       techStack: ["Angular", "Flask", "PostgreSQL"],
       url: "#"
     },
     {
       id: 4,
       title: "Project 4",
-      description: "456",
+      description: "jkl",
       techStack: ["Svelte", "Ruby on Rails", "MySQL"],
       url: "#"
     },
     {
       id: 5,
       title: "Project 5",
-      description: "789",
+      description: "mno",
       techStack: ["Next.js", "Spring Boot", "SQLite"],
       url: "#"     
     },
     {
       id : 6,
       title: "Project 6",
-      description: "101",
+      description: "pqr",
       techStack: ["Golang", "ASP.NET", "Firebase"],
       url: "#"
     }

@@ -1,6 +1,7 @@
-# Modern Portfolio Template 🚀
+# 🚀 Modern Portfolio Template
 
-A sleek, modern portfolio template built with React, Vite, and Framer Motion. This template features a stunning black and white design with smooth animations and a polished user interface.
+A sleek, modern portfolio template built with React, Vite, and Framer Motion.
+This template features a stunning black and white design with smooth animations and a polished user interface.
 
 ## ✨ Features
 
@@ -18,23 +19,23 @@ A sleek, modern portfolio template built with React, Vite, and Framer Motion. Th
 
 ## 🛠️ Tech Stack
 
-- React
-- Vite
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide Icons
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Lucide Icons](https://lucide.dev/)
 
-## 🚀 Getting Started
+## 🪄 Getting Started
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Resorcinolworks/PortfolioTemplate.git
+git clone https://github.com/ryan-mac74/portfolio.git
 ```
 
 2. Install dependencies:
 ```bash
-cd PortfolioTemplate
+cd Portfolio
 npm install
 ```
 
@@ -70,16 +71,11 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgements
 
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
+This project is based on and inspired by the following open-source repository:
 
----
+- **[Ayush Raghuvanshi](https://github.com/ResorcinolWorks/PortfolioTemplate)**
 
-Made with ❤️ by [Ayush Raghuvanshi](https://github.com/Resorcinolworks)
-
-Feel free to star ⭐ this repository if you find it useful!
+The original project provided the foundation for this work.  
+This repository includes modifications, extensions, and personal improvements made for my own purposes.
