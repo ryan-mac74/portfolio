@@ -97,7 +97,7 @@ const CompetitiveStats: React.FC = () => {
   };
 
   return (
-    <section className="py-20 px-4 relative">
+    <section id="stats" className="py-20 px-4 relative">
       {/* Premium lighting effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-corner-light-premium opacity-30 z-0"></div>
       
