@@ -45,7 +45,7 @@ const HeroSection: React.FC = () => {
             custom={0}
             variants={textVariants}
           >
-            Hi, I'm John Doe —
+            Hi, I'm Ryan Mac —
           </motion.span>{" "}
           <motion.span 
             className="inline-block hero-text-gradient"
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
         >
-          Building robust solutions with code, design, and caffeine.
+          Building robust solutions with code and design.
         </motion.p>
         
         <motion.div

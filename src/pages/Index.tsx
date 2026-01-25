@@ -69,7 +69,7 @@ const Index: React.FC = () => {
         
         <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold italic">John Doe</h1>
+            <h1 className="text-xl font-bold italic">Ryan Mac</h1>
             <nav className="hidden md:block">
               <ul className="flex space-x-8">
                 <li>
@@ -86,7 +86,9 @@ const Index: React.FC = () => {
                 </li>
                 <li>
                   <a 
-                    href="/resume.pdf" 
+                    href="/public/resume.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="cta-button-premium text-sm px-4 py-1"
                   >
                     Resume
@@ -110,7 +112,7 @@ const Index: React.FC = () => {
         <footer className="py-12 px-4 border-t border-white/10 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-white/60">
-              © {new Date().getFullYear()} John Doe. All rights reserved.
+              © {new Date().getFullYear()} Ryan Mac. All rights reserved.
             </p>
           </div>
         </footer>

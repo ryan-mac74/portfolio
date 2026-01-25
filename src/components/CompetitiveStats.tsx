@@ -45,8 +45,8 @@ const CompetitiveStats: React.FC = () => {
       name: "LeetCode",
       icon: <Award className="w-6 h-6 text-[#FFA116]" />,
       color: '#FFA116',
-      username: 'johndoe',
-      url: 'https://leetcode.com/johndoe/',
+      username: 'ryanmac',
+      url: 'https://leetcode.com/ryanmac/',
       rating: "1700",
       data: leetcodeData,
       problems: "350 problems solved"
@@ -55,8 +55,8 @@ const CompetitiveStats: React.FC = () => {
       name: "Codeforces",
       icon: <LineChart className="w-6 h-6 text-[#318CE7]" />,
       color: '#318CE7',
-      username: 'johndoe',
-      url: 'https://codeforces.com/profile/johndoe',
+      username: 'ryanmac',
+      url: 'https://codeforces.com/profile/ryanmac',
       rating: "2000",
       data: codeforcesData,
       problems: "Highest: 2000"
@@ -65,8 +65,8 @@ const CompetitiveStats: React.FC = () => {
       name: "CodeChef",
       icon: <Award className="w-6 h-6 text-[#9C7A2E]" />,
       color: '#9C7A2E',
-      username: 'johndoe',
-      url: 'https://www.codechef.com/users/johndoe',
+      username: 'ryanmac',
+      url: 'https://www.codechef.com/users/ryanmac',
       rating: "1900",
       data: codechefData,
       problems: "Best Rank: 150"
