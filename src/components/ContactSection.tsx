@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Instagram, Phone } from 'lucide-react';
+import { Github, Linkedin, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
 
@@ -167,20 +167,6 @@ const ContactSection: React.FC = () => {
                   <Github className="w-5 h-5 group-hover:text-white transition-colors" />
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
-                { /*
-                
-                <a 
-                  href="https://www.instagram.com/ryan_mac_4" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
-                  style={{
-                    boxShadow: '0 0 10px rgba(255, 255, 255, 0.05)'
-                  }}
-                >
-                  <Instagram className="w-5 h-5 group-hover:text-white transition-colors" />
-                  <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
-                </a>
                 <a 
                   href="https://wa.me/14389262702" 
                   target="_blank" 
@@ -193,8 +179,6 @@ const ContactSection: React.FC = () => {
                   <Phone className="w-5 h-5 group-hover:text-white transition-colors" />
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
-
-                */ }
               </div>
               
               <div className="text-center relative z-10">
