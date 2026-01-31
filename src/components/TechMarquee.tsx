@@ -15,9 +15,10 @@ const TechMarquee: React.FC = () => {
     { name: "Next.js", icon: <Code2 className={iconClass} /> },
     { name: "Express.js", icon: <Cpu className={iconClass} /> },
     { name: "FastAPI", icon: <Cpu className={iconClass} /> },
-    { name: "Docker", icon: <Container className={iconClass} /> },
     { name: "MySQL", icon: <Database className={iconClass} /> },
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
+    { name: "Git", icon: <Github className={iconClass} /> },
+    { name: "Docker", icon: <Container className={iconClass} /> },
   ];
   
   const techStackRow2 = [
@@ -28,7 +29,6 @@ const TechMarquee: React.FC = () => {
     { name: "HTML", icon: <Code2 className={iconClass} /> },
     { name: "CSS", icon: <Paintbrush className={iconClass} /> },
     { name: "TailwindCSS", icon: <Paintbrush className={iconClass} /> },
-    { name: "GitHub", icon: <Github className={iconClass} /> },
     { name: "VS Code", icon: <Terminal className={iconClass} /> },
     { name: "Emacs", icon: <Terminal className={iconClass} /> },
   ];
