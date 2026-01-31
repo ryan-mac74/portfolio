@@ -72,7 +72,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="text-lg mb-6 text-white/80 text-center">
-              Have a project in mind or just wanna chat? <br />
+              Have a Project in mind or just wanna Chat? <br />
               Feel free to reach out.
             </p>
             
@@ -182,7 +182,7 @@ const ContactSection: React.FC = () => {
               </div>
               
               <div className="text-center relative z-10">
-                <p className="text-white/70 mb-1">Or email me at:</p>
+                <p className="text-white/70 mb-1">Or Email me at:</p>
                 <a 
                   href="mailto:ryan.mac.rm4@gmail.com" 
                   className="text-white hover:underline hover:text-white/90 transition-colors relative group"

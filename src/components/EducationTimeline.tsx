@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { toast } from 'sonner';
 
 interface Education {
   id: number;
   years: string;
-  link: string;
   degree: string;
   institution: string;
   location: string;
   grade: string;
+  link: string;
 }
 
 const EducationTimeline: React.FC = () => {
@@ -16,20 +17,20 @@ const EducationTimeline: React.FC = () => {
     {
       id: 1,
       years: "September 2024 - December 2027 (expected)",
-      link: "",
       degree: "Bachelor’s in Computer Science",
       institution: "Université de Montréal (UdeM)",
       location: "Montreal, QC, Canada",
       grade: "GPA: 3.413/4.3",
+      link: "",
     },
     {
       id: 2,
       years: "September 2023 - December 2023",
-      link: "https://www.ryanmacwaykit.com/itti.pdf",
       degree: "Certificate of English Proficiency",
       institution: "International TEFL/TESOL Training Institute (ITTI)",
       location: "Antananarivo, Madagascar",
       grade: "Level: C2",
+      link: "/itti.pdf",
     }
   ];
 
@@ -67,13 +68,24 @@ const EducationTimeline: React.FC = () => {
               
               <div className="glow-card p-6">
                 <span className="text-white/100 block mb-1">{item.years}</span>
-                <a 
-                  href={item.link} target="_blank" rel="noopener noreferrer" 
-                  className="text-white/90 mb-1"
-                >
-                  {item.link}
-                </a>
-                <h2 className="text-xl font-bold mb-1">{item.degree}</h2>
+                <h2 className="text-xl font-bold mb-1">
+                  (
+                    <a 
+                      href={item.link || "#"} 
+                      target={item.link ? "_blank" : undefined} 
+                      rel="noopener noreferrer" 
+                      className="text-white/50"
+                      onClick={(e) => {
+                        if (!item.link) {
+                          e.preventDefault();
+                          toast("Document not available yet.");
+                        }
+                      }}
+                    >
+                      PDF 
+                    </a>
+                  ) {item.degree} 
+                </h2>
                 <p className="text-white/80 mb-1">{item.institution}</p>
                 <p className="text-white/70 mb-1">{item.location}</p>
                 <p className="text-white/60">{item.grade}</p>
