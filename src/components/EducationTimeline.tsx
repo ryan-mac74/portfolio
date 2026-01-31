@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 interface Education {
   id: number;
   years: string;
+  link: string;
   degree: string;
   institution: string;
+  location: string;
   grade: string;
 }
 
@@ -13,17 +15,21 @@ const EducationTimeline: React.FC = () => {
   const educationData: Education[] = [
     {
       id: 1,
-      years: "202X–202X",
-      degree: "B.Tech, Computer Science",
-      institution: "IIT Dholakpur",
-      grade: "GPA: X/10"
+      years: "September 2024 - December 2027 (expected)",
+      link: "",
+      degree: "Bachelor’s in Computer Science",
+      institution: "Université de Montréal (UdeM)",
+      location: "Montreal, QC, Canada",
+      grade: "GPA: 3.413/4.3",
     },
     {
       id: 2,
-      years: "202X–202X",
-      degree: "Higher Secondary Education",
-      institution: "XX School",
-      grade: "Percentage: XX%"
+      years: "September 2023 - December 2023",
+      link: "https://www.ryanmacwaykit.com/itti.pdf",
+      degree: "Certificate of English Proficiency",
+      institution: "International TEFL/TESOL Training Institute (ITTI)",
+      location: "Antananarivo, Madagascar",
+      grade: "Level: C2",
     }
   ];
 
@@ -60,9 +66,16 @@ const EducationTimeline: React.FC = () => {
               }}></div>
               
               <div className="glow-card p-6">
-                <span className="text-white/60 block mb-1">{item.years}</span>
-                <h3 className="text-xl font-bold mb-1">{item.degree}</h3>
+                <span className="text-white/100 block mb-1">{item.years}</span>
+                <a 
+                  href={item.link} target="_blank" rel="noopener noreferrer" 
+                  className="text-white/90 mb-1"
+                >
+                  {item.link}
+                </a>
+                <h2 className="text-xl font-bold mb-1">{item.degree}</h2>
                 <p className="text-white/80 mb-1">{item.institution}</p>
+                <p className="text-white/70 mb-1">{item.location}</p>
                 <p className="text-white/60">{item.grade}</p>
               </div>
             </motion.div>

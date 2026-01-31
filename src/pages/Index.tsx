@@ -120,10 +120,10 @@ const Index: React.FC = () => {
         <main className="pt-16 relative z-10">
           <HeroSection />
           <TechMarquee />
+          <EducationTimeline />
           {/*
           
           <ProjectsSection />
-          <EducationTimeline />
           <CompetitiveStats />
           <BlogSection />
           

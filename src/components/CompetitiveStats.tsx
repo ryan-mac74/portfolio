@@ -59,16 +59,6 @@ const CompetitiveStats: React.FC = () => {
       rating: "2000",
       data: codeforcesData,
       problems: "Highest: 2000"
-    },
-    {
-      name: "CodeChef",
-      icon: <Award className="w-6 h-6 text-[#9C7A2E]" />,
-      color: '#9C7A2E',
-      username: 'ryanmac',
-      url: 'https://www.codechef.com/users/ryanmac',
-      rating: "1900",
-      data: codechefData,
-      problems: "Best Rank: 150"
     }
   ];
 
