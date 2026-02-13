@@ -3,7 +3,7 @@ import {
   Github, Code2, Database, 
   ServerCrash, Container, 
   Cpu, Cloud, Terminal, 
-  Paintbrush, Layers, Zap 
+  Paintbrush, Zap,
 } from 'lucide-react';
 
 const TechMarquee: React.FC = () => {
@@ -19,6 +19,7 @@ const TechMarquee: React.FC = () => {
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
     { name: "Git", icon: <Github className={iconClass} /> },
     { name: "Docker", icon: <Container className={iconClass} /> },
+    { name: "Nginx", icon: <ServerCrash className={iconClass} /> },
   ];
   
   const techStackRow2 = [
@@ -31,6 +32,7 @@ const TechMarquee: React.FC = () => {
     { name: "TailwindCSS", icon: <Paintbrush className={iconClass} /> },
     { name: "VS Code", icon: <Terminal className={iconClass} /> },
     { name: "Emacs", icon: <Terminal className={iconClass} /> },
+    { name: "DigitalOcean", icon: <Cloud className={iconClass} /> },
   ];
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
