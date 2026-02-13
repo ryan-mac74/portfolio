@@ -36,8 +36,8 @@ const TechMarquee: React.FC = () => {
   ];
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {
-    // if a seamless continuous scroll isn't needed, no duplication needed.
-    return items.map((tech, index) => (
+    // Duplicate items for seamless scrolling
+    return [...items, ...items].map((tech, index) => (
       <span key={index} className="tech-badge-premium mx-5 flex items-center px-6 py-3 min-w-fit">
         {tech.icon}
         {tech.name}
@@ -51,15 +51,21 @@ const TechMarquee: React.FC = () => {
       <div className="absolute w-[400px] h-[400px] rounded-full bg-radial-glow-premium opacity-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
       
       {/* Top row - scrolling right */}
-      <div className="relative overflow-hidden ">
-        <div className="animate-scroll-right flex whitespace-nowrap py-5">
+      <div className="relative overflow-hidden flex">
+        <div className="animate-scroll-right flex whitespace-nowrap py-5" style={{ animationDuration: '25s' }}>
+          {renderMarqueeItems(techStackRow1)}
+        </div>
+        <div className="animate-scroll-right flex whitespace-nowrap py-5" style={{ animationDuration: '25s' }}>
           {renderMarqueeItems(techStackRow1)}
         </div>
       </div>
       
       {/* Bottom row - scrolling left */}
-      <div className="relative overflow-hidden mt-10">
-        <div className="animate-scroll-left flex whitespace-nowrap py-5">
+      <div className="relative overflow-hidden mt-10 flex">
+        <div className="animate-scroll-left flex whitespace-nowrap py-5" style={{ animationDuration: '25s' }}>
+          {renderMarqueeItems(techStackRow2)}
+        </div>
+        <div className="animate-scroll-left flex whitespace-nowrap py-5" style={{ animationDuration: '25s' }}>
           {renderMarqueeItems(techStackRow2)}
         </div>
       </div>
