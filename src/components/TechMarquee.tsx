@@ -12,26 +12,28 @@ const TechMarquee: React.FC = () => {
   const techStackRow1 = [
     { name: "React", icon: <Code2 className={iconClass} /> },
     { name: "Vite", icon: <Zap className={iconClass} /> },
-    { name: "Next.js", icon: <Code2 className={iconClass} /> },
     { name: "Express.js", icon: <Cpu className={iconClass} /> },
+    { name: "Next.js", icon: <Code2 className={iconClass} /> },
+    { name: "TypeScript", icon: <Code2 className={iconClass} /> },
+    { name: "JavaScript", icon: <Code2 className={iconClass} /> },
+    { name: "Python", icon: <Cpu className={iconClass} /> },
     { name: "FastAPI", icon: <Cpu className={iconClass} /> },
     { name: "MySQL", icon: <Database className={iconClass} /> },
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
-    { name: "Git", icon: <Github className={iconClass} /> },
-    { name: "Docker", icon: <Container className={iconClass} /> },
-    { name: "Nginx", icon: <ServerCrash className={iconClass} /> },
+    { name: "Prisma", icon: <Cpu className={iconClass} /> },
   ];
   
   const techStackRow2 = [
-    { name: "Python", icon: <Cpu className={iconClass} /> },
-    { name: "Java", icon: <Cpu className={iconClass} /> },
-    { name: "JavaScript", icon: <Code2 className={iconClass} /> },
-    { name: "TypeScript", icon: <Code2 className={iconClass} /> },
     { name: "HTML", icon: <Code2 className={iconClass} /> },
     { name: "CSS", icon: <Paintbrush className={iconClass} /> },
     { name: "TailwindCSS", icon: <Paintbrush className={iconClass} /> },
+    { name: "PHP", icon: <Code2 className={iconClass} /> },
+    { name: "Java", icon: <Cpu className={iconClass} /> },
+    { name: "Nginx", icon: <ServerCrash className={iconClass} /> },
+    { name: "Docker", icon: <Container className={iconClass} /> },
+    { name: "Git", icon: <Github className={iconClass} /> },
     { name: "VS Code", icon: <Terminal className={iconClass} /> },
-    { name: "Emacs", icon: <Terminal className={iconClass} /> },
+    { name: "Vim", icon: <Terminal className={iconClass} /> },
     { name: "DigitalOcean", icon: <Cloud className={iconClass} /> },
   ];
 

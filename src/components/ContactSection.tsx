@@ -5,10 +5,14 @@ import { toast } from 'sonner';
 import emailjs from '@emailjs/browser';
 
 const ContactSection: React.FC = () => {
+  const PERSONAL_EMAIL = "ryan.mac.rm4@gmail.com";
+  const PHONE_NUMBER = "14389262702";
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    subject: '',
+    message: '',
   });
   
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -27,17 +31,17 @@ const ContactSection: React.FC = () => {
       'service_w4zo1kf',
       'template_om9rdqq',
       {
-        subject: 'My Portfolio',
+        subject: formData.subject,
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'ryan.mac.rm4@gmail.com'
+        to_email: PERSONAL_EMAIL,
       },
-      'IXFH47cUfkSLXooAS'
+      'IXFH47cUfkSLXooAS',
     )
     .then(() => {
       toast.success('Message sent successfully!');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
     })
     .catch((error) => {
       console.error('Email error:', error);
@@ -102,11 +106,24 @@ const ContactSection: React.FC = () => {
                 />
                 <div className="absolute inset-0 rounded-md bg-white/5 opacity-0 group-hover:opacity-100 blur-sm transition-opacity -z-10"></div>
               </div>
+
+              <div className="relative group">
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-dark-100/60 border border-dark-200 rounded-md focus-glow transition-all focus:border-white/30"
+                />
+                <div className="absolute inset-0 rounded-md bg-white/5 opacity-0 group-hover:opacity-100 blur-sm transition-opacity -z-10"></div>
+              </div>
               
               <div className="relative group">
                 <textarea
                   name="message"
-                  placeholder="Your Message"
+                  placeholder="Message"
                   rows={5}
                   value={formData.message}
                   onChange={handleChange}
@@ -168,7 +185,7 @@ const ContactSection: React.FC = () => {
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
                 <a 
-                  href="https://wa.me/14389262702" 
+                  href={`https://wa.me/${PHONE_NUMBER}`} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
@@ -184,10 +201,10 @@ const ContactSection: React.FC = () => {
               <div className="text-center relative z-10">
                 <p className="text-white/70 mb-1">Or Email me at:</p>
                 <a 
-                  href="mailto:ryan.mac.rm4@gmail.com" 
+                  href={`mailto:${PERSONAL_EMAIL}`} 
                   className="text-white hover:underline hover:text-white/90 transition-colors relative group"
                 >
-                  ryan.mac.rm4@gmail.com
+                  {PERSONAL_EMAIL}
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/50 group-hover:w-full transition-all duration-300"></span>
                 </a>
               </div>
