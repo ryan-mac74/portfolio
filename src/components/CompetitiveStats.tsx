@@ -59,7 +59,7 @@ const CompetitiveStats: React.FC = () => {
       rating: "2000",
       data: codeforcesData,
       problems: "Highest: 2000"
-    }
+    },
   ];
 
   const renderChart = (data: typeof leetcodeData, color: string) => {

@@ -31,7 +31,7 @@ const EducationTimeline: React.FC = () => {
       location: "Antananarivo, Madagascar",
       grade: "Level: C2",
       link: "/itti.pdf",
-    }
+    },
   ];
 
   return (
@@ -55,13 +55,13 @@ const EducationTimeline: React.FC = () => {
           {educationData.map((item, index) => (
             <motion.div 
               key={item.id}
-              className="mb-12 relative"
+              className="relative mb-12"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              {/* Timeline dot with glow */}
+              {/* Timeline dot with glow effect */}
               <div className="absolute -left-10 w-4 h-4 rounded-full bg-white/20 border border-white/40" style={{
                 boxShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
               }}></div>

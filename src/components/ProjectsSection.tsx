@@ -5,6 +5,8 @@ import { ArrowRight } from 'lucide-react';
 
 interface Project {
   id: number;
+  years: string;
+  logo?: string;
   title: string;
   description: string;
   techStack: string[];
@@ -15,46 +17,20 @@ const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Project 1",
-      description: "abc",
-      techStack: ["React", "Node.js", "Express"],
-      url: "#"
+      years: "February 2026 - Present",
+      logo: "/nowsworld.png",
+      title: "NowSWorld",
+      description:
+        "A New Social Media Platform to write down all your thoughts, " +
+        "ideas or just what’s on your mind at the moment, depending on your mood ... " +
+        "with the possibility to take a quick note or just post news about " +
+        "what’s happening in the world from where you are.\n" +
+        "It's designed to redefine how people communicate and " +
+        "make new connection through unique features and a modern UI.\n" +
+        "The goal is to make something different from existing platforms.",
+      techStack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Express", "Node.js", "Prisma", "PostgreSQL"],
+      url: "https://www.nowsworld.com",
     },
-    {
-      id: 2,
-      title: "Project 2",
-      description: "def",
-      techStack: ["Vue.js", "Django", "MongoDB"],
-      url: "#"
-    },
-    {
-      id: 3,
-      title: "Project 3",
-      description: "ghi",
-      techStack: ["Angular", "Flask", "PostgreSQL"],
-      url: "#"
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      description: "jkl",
-      techStack: ["Svelte", "Ruby on Rails", "MySQL"],
-      url: "#"
-    },
-    {
-      id: 5,
-      title: "Project 5",
-      description: "mno",
-      techStack: ["Next.js", "Spring Boot", "SQLite"],
-      url: "#"     
-    },
-    {
-      id : 6,
-      title: "Project 6",
-      description: "pqr",
-      techStack: ["Golang", "ASP.NET", "Firebase"],
-      url: "#"
-    }
   ];
 
   const cardVariants = {
@@ -79,7 +55,7 @@ const ProjectsSection: React.FC = () => {
       <div className="light-ray-premium opacity-20" style={{ top: '30%', right: '-20%', width: '70%', transform: 'rotate(165deg)' }}></div>
       <div className="light-ray-premium opacity-15" style={{ top: '60%', right: '-10%', width: '50%', transform: 'rotate(150deg)' }}></div>
       
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-4xl mx-auto relative z-10">
         <motion.h2 
           className="section-heading-premium relative"
           initial={{ opacity: 0, y: 20 }}
@@ -90,7 +66,11 @@ const ProjectsSection: React.FC = () => {
           Featured Projects
         </motion.h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="relative pl-10">
+          {/* Timeline line with glow effect */}
+          <div className="timeline-line"></div>
+          
+          {/* Projects items */}
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -99,7 +79,13 @@ const ProjectsSection: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+              className="relative mb-12"
             >
+              {/* Timeline dot with glow effect */}
+              <div className="absolute -left-10 w-4 h-4 rounded-full bg-white/20 border border-white/40" style={{
+                boxShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
+              }}></div>
+              
               <GlowCard 
                 intensity={index % 3 === 0 ? 'high' : index % 2 === 0 ? 'medium' : 'low'}
                 className="group h-full"
@@ -110,8 +96,18 @@ const ProjectsSection: React.FC = () => {
                   <div className="absolute -inset-x-4 -inset-y-4 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 -z-10 blur-2xl transition-opacity"></div>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-br from-white via-white/20 to-transparent transition-all duration-500"></div>
                   
-                  <h3 className="text-2xl font-bold italic mb-3 group-hover:text-white transition-colors">{project.title}</h3>
-                  <p className="text-white/70 mb-6 group-hover:text-white/90 transition-colors">{project.description}</p>
+                  <div className="flex justify-between items-center mb-3">
+                    <div className="flex items-center gap-3">
+                      {project.logo && (
+                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center p-1 shrink-0">
+                          <img src={project.logo} alt="LOGO" className="w-full h-full object-contain" />
+                        </div>
+                      )}
+                      <h3 className="text-2xl font-bold italic group-hover:text-white transition-colors">{project.title}</h3>
+                    </div>
+                    <span className="text-white/100 text-sm">{project.years}</span>
+                  </div>
+                  <p className="text-white/70 mb-6 group-hover:text-white/90 transition-colors whitespace-pre-line">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                     {project.techStack.map((tech, i) => (
@@ -126,6 +122,8 @@ const ProjectsSection: React.FC = () => {
                   
                   <a 
                     href={project.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
                     className="inline-flex items-center gap-1 text-sm text-white/70 hover:text-white group-hover:text-white/90 transition-colors relative mt-auto"
                   >
                     <span>View Project</span>

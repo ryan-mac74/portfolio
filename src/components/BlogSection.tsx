@@ -47,7 +47,7 @@ const BlogSection: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          Sharing stories & threads from my coding journey.
+          Stories & Threads from my Coding Journey.
         </motion.h2>
         
         <div className="space-y-6">

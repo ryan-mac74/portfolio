@@ -29,7 +29,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
     high: {
       initial: "0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.12)",
       hover: "0 0 45px rgba(255, 255, 255, 0.3), 0 0 70px rgba(255, 255, 255, 0.2)"
-    }
+    },
   };
 
   return (

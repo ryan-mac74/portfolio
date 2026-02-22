@@ -83,11 +83,7 @@ const Index: React.FC = () => {
                 <li>
                   <a 
                     href="#projects" 
-                    className="hover:text-white transition-colors relative group" 
-                    onClick={(e) => {
-                      e.preventDefault();
-                      toast("The Projects section is currently under development.");
-                    }}
+                    className="hover:text-white transition-colors relative group"
                   >
                     Projects
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
@@ -121,9 +117,9 @@ const Index: React.FC = () => {
           <HeroSection />
           <TechMarquee />
           <EducationTimeline />
+          <ProjectsSection />
           {/*
           
-          <ProjectsSection />
           <CompetitiveStats />
           <BlogSection />
           

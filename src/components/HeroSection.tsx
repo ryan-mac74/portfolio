@@ -74,11 +74,7 @@ const HeroSection: React.FC = () => {
         >
           <a 
             href="#projects" 
-            className="cta-button-premium group inline-flex items-center gap-2" 
-            onClick={(e) => {
-              e.preventDefault();
-              toast("The Projects section is currently under development.");
-            }}
+            className="cta-button-premium group inline-flex items-center gap-2"
           >
             <span>View Projects</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
