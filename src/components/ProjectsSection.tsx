@@ -96,7 +96,7 @@ const ProjectsSection: React.FC = () => {
                   <div className="absolute -inset-x-4 -inset-y-4 bg-white/5 rounded-xl opacity-0 group-hover:opacity-100 -z-10 blur-2xl transition-opacity"></div>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-10 bg-gradient-to-br from-white via-white/20 to-transparent transition-all duration-500"></div>
                   
-                  <div className="flex justify-between items-center mb-3">
+                  <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-2 md:gap-0 mb-3 items-start">
                     <div className="flex items-center gap-3">
                       {project.logo && (
                         <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center p-1 shrink-0">
