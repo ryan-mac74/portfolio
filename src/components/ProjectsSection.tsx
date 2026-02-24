@@ -21,7 +21,7 @@ const ProjectsSection: React.FC = () => {
       logo: "/nowsworld.png",
       title: "NowSWorld",
       description:
-        "A New Social Media Platform to write down all your thoughts, " +
+        "A new Social Media Platform to write down all your thoughts, " +
         "ideas or just what’s on your mind at the moment, depending on your mood ... " +
         "with the possibility to take a quick note or just post news about " +
         "what’s happening in the world from where you are.\n" +
@@ -99,7 +99,7 @@ const ProjectsSection: React.FC = () => {
                   <div className="flex flex-col-reverse md:flex-row md:justify-between md:items-center gap-2 md:gap-0 mb-3 items-start">
                     <div className="flex items-center gap-3">
                       {project.logo && (
-                        <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center p-1 shrink-0">
+                        <div className="w-10 h-10 flex items-center justify-center p-1 shrink-0">
                           <img src={project.logo} alt="LOGO" className="w-full h-full object-contain" />
                         </div>
                       )}
