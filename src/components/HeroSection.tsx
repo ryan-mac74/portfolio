@@ -21,65 +21,77 @@ const HeroSection: React.FC = () => {
       {/* Premium corner light effects */}
       <div className="corner-light-premium"></div>
       <div className="corner-light-premium" style={{ right: 0, left: 'auto', transform: 'rotate(90deg)' }}></div>
-      
+
       {/* Light rays */}
       <div className="light-ray-premium opacity-30" style={{ top: '10%', left: '-10%', width: '80%', transform: 'rotate(25deg)' }}></div>
       <div className="light-ray-premium opacity-20" style={{ top: '30%', left: '-5%', width: '60%', transform: 'rotate(15deg)' }}></div>
       <div className="light-ray-premium opacity-10" style={{ top: '60%', left: '-15%', width: '70%', transform: 'rotate(-10deg)' }}></div>
-      
+
       {/* Central premium glow effect */}
       <div className="absolute w-[800px] h-[800px] rounded-full bg-radial-glow-premium opacity-60 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0 animate-glow-pulse"></div>
-      
-      <div className="max-w-4xl mx-auto relative z-10">
-        <motion.h1 
-          className="hero-heading relative text-5xl md:text-7xl font-extrabold italic mb-6 leading-tight"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <span className="absolute -inset-x-10 -inset-y-6 bg-white/5 rounded-3xl blur-3xl -z-10"></span>
-          <motion.span 
-            className="inline-block"
-            initial="hidden"
-            animate="visible"
-            custom={0}
-            variants={textVariants}
+
+      <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center gap-10">
+        {/* Profile Image */}
+        <motion.img
+          src="/me.png"
+          alt="My Profile Picture"
+          className="w-64 h-64 md:w-96 md:h-96 rounded-full object-cover border-4 border-white/10 shadow-xl shrink-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+
+        <div className="text-center">
+          <motion.h1
+            className="hero-heading relative text-5xl md:text-7xl font-extrabold italic mb-6 leading-tight"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            Hey! I'm Ryan Mac —
-          </motion.span>{" "}
-          <motion.span 
-            className="inline-block hero-text-gradient"
-            initial="hidden"
-            animate="visible"
-            custom={1}
-            variants={textVariants}
+            <span className="absolute -inset-x-10 -inset-y-6 bg-white/5 rounded-3xl blur-3xl -z-10"></span>
+            <motion.span
+              className="inline-block"
+              initial="hidden"
+              animate="visible"
+              custom={0}
+              variants={textVariants}
+            >
+              Hey! I'm Ryan Mac <br />
+              ------- <br />
+            </motion.span>{" "}
+            <motion.span
+              className="inline-block hero-text-gradient"
+              initial="hidden"
+              animate="visible"
+              custom={1}
+              variants={textVariants}
+            >
+              turning Ideas into Reality
+            </motion.span>
+          </motion.h1>
+
+          <motion.p
+            className="text-xl md:text-2xl font-light italic text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            turning Ideas into Reality
-          </motion.span>
-        </motion.h1>
-        
-        <motion.p 
-          className="text-xl md:text-2xl font-light italic text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        >
-          "The people who are crazy enough to think they can change the world are the ones who do" - Steve Jobs 💥🌎
-        </motion.p>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-        >
-          <a 
-            href="#projects" 
-            className="cta-button-premium group inline-flex items-center gap-2"
+            "The people who are crazy enough to think they can change the world are the ones who do" - Steve Jobs 💥🌎
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
-            <span>View Projects</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-        </motion.div>
+            <a
+              href="#projects"
+              className="cta-button-premium group inline-flex items-center gap-2"
+            >
+              <span>View Projects</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
