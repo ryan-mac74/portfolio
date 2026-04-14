@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
-  Github, Code2, Database, 
-  ServerCrash, Container, 
-  Cpu, Cloud, Terminal, 
+import {
+  Github, Code2, Database,
+  ServerCrash, Container,
+  Cpu, Cloud, Terminal,
   Paintbrush, Zap,
 } from 'lucide-react';
 
@@ -22,7 +22,7 @@ const TechMarquee: React.FC = () => {
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
     { name: "Prisma", icon: <Cpu className={iconClass} /> },
   ];
-  
+
   const techStackRow2 = [
     { name: "HTML", icon: <Code2 className={iconClass} /> },
     { name: "CSS", icon: <Paintbrush className={iconClass} /> },
@@ -51,7 +51,7 @@ const TechMarquee: React.FC = () => {
     <section id="tech" className="py-20 bg-dark-100/30 relative max-w-screen-xl mx-auto px-10 overflow-hidden">
       {/* Light effect for tech section */}
       <div className="absolute w-[400px] h-[400px] rounded-full bg-radial-glow-premium opacity-30 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0"></div>
-      
+
       {/* Top row - scrolling right */}
       <div className="relative overflow-hidden flex">
         <div className="animate-scroll-right flex whitespace-nowrap py-5" style={{ animationDuration: '25s' }}>
@@ -61,7 +61,7 @@ const TechMarquee: React.FC = () => {
           {renderMarqueeItems(techStackRow1)}
         </div>
       </div>
-      
+
       {/* Bottom row - scrolling left */}
       <div className="relative overflow-hidden mt-10 flex">
         <div className="animate-scroll-left flex whitespace-nowrap py-5" style={{ animationDuration: '25s' }}>

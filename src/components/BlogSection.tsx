@@ -40,7 +40,7 @@ const BlogSection: React.FC = () => {
   return (
     <section id="blog" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <motion.h2 
+        <motion.h2
           className="section-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,17 +49,17 @@ const BlogSection: React.FC = () => {
         >
           Stories & Threads from my Coding Journey.
         </motion.h2>
-        
+
         <div className="space-y-6">
           {blogPosts.map((post, index) => (
-            <motion.div 
+            <motion.div
               key={post.id}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <a 
+              <a
                 href={post.url}
                 className="block glow-card p-6 hover:border-white/40 transition-colors group"
               >

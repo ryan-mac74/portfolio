@@ -37,7 +37,7 @@ const EducationTimeline: React.FC = () => {
   return (
     <section id="education" className="py-20 px-4">
       <div className="max-w-4xl mx-auto">
-        <motion.h2 
+        <motion.h2
           className="section-heading"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,14 +46,14 @@ const EducationTimeline: React.FC = () => {
         >
           Education
         </motion.h2>
-        
+
         <div className="relative pl-10">
           {/* Timeline line with glow effect */}
           <div className="timeline-line"></div>
-          
+
           {/* Timeline items */}
           {educationData.map((item, index) => (
-            <motion.div 
+            <motion.div
               key={item.id}
               className="relative mb-12"
               initial={{ opacity: 0, x: -20 }}
@@ -65,26 +65,26 @@ const EducationTimeline: React.FC = () => {
               <div className="absolute -left-10 w-4 h-4 rounded-full bg-white/20 border border-white/40" style={{
                 boxShadow: '0 0 10px rgba(255, 255, 255, 0.3)'
               }}></div>
-              
+
               <div className="glow-card p-6">
                 <span className="text-white/100 block mb-1">{item.years}</span>
                 <h2 className="text-xl font-bold mb-1">
                   (
-                    <a 
-                      href={item.link || "#"} 
-                      target={item.link ? "_blank" : undefined} 
-                      rel="noopener noreferrer" 
-                      className="text-white/50"
-                      onClick={(e) => {
-                        if (!item.link) {
-                          e.preventDefault();
-                          toast("Document not available yet.");
-                        }
-                      }}
-                    >
-                      PDF 
-                    </a>
-                  ) {item.degree} 
+                  <a
+                    href={item.link || "#"}
+                    target={item.link ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="text-white/50"
+                    onClick={(e) => {
+                      if (!item.link) {
+                        e.preventDefault();
+                        toast("Document not available yet.");
+                      }
+                    }}
+                  >
+                    PDF
+                  </a>
+                  ) {item.degree}
                 </h2>
                 <p className="text-white/80 mb-1">{item.institution}</p>
                 <p className="text-white/70 mb-1">{item.location}</p>

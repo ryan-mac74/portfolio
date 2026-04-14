@@ -16,7 +16,7 @@ const CompetitiveStats: React.FC = () => {
     { month: 'Jul', rating: 1650 },
     { month: 'Aug', rating: 1700 },
   ];
-  
+
   const codeforcesData = [
     { month: 'Jan', rating: 1700 },
     { month: 'Feb', rating: 1750 },
@@ -27,7 +27,7 @@ const CompetitiveStats: React.FC = () => {
     { month: 'Jul', rating: 1950 },
     { month: 'Aug', rating: 2000 },
   ];
-  
+
   const codechefData = [
     { month: 'Jan', rating: 1600 },
     { month: 'Feb', rating: 1650 },
@@ -69,16 +69,16 @@ const CompetitiveStats: React.FC = () => {
           <CartesianGrid strokeDasharray="3 3" stroke="#333333" vertical={false} />
           <XAxis dataKey="month" stroke="#666666" tick={{ fill: '#666666', fontSize: 10 }} />
           <YAxis stroke="#666666" tick={{ fill: '#666666', fontSize: 10 }} />
-          <Tooltip 
-            contentStyle={{ backgroundColor: '#1A1A1A', border: '1px solid #333333', borderRadius: '4px', boxShadow: '0 0 20px rgba(255, 255, 255, 0.15)' }} 
-            labelStyle={{ color: 'white' }} 
+          <Tooltip
+            contentStyle={{ backgroundColor: '#1A1A1A', border: '1px solid #333333', borderRadius: '4px', boxShadow: '0 0 20px rgba(255, 255, 255, 0.15)' }}
+            labelStyle={{ color: 'white' }}
           />
-          <Line 
-            type="monotone" 
-            dataKey="rating" 
-            stroke={color} 
-            strokeWidth={3} 
-            dot={{ r: 3, fill: color, strokeWidth: 2, stroke: "#ffffff" }} 
+          <Line
+            type="monotone"
+            dataKey="rating"
+            stroke={color}
+            strokeWidth={3}
+            dot={{ r: 3, fill: color, strokeWidth: 2, stroke: "#ffffff" }}
             activeDot={{ r: 6, fill: color, stroke: 'white', strokeWidth: 2 }}
           />
         </RechartsLineChart>
@@ -90,9 +90,9 @@ const CompetitiveStats: React.FC = () => {
     <section id="stats" className="py-20 px-4 relative">
       {/* Premium lighting effects */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-corner-light-premium opacity-30 z-0"></div>
-      
+
       <div className="max-w-6xl mx-auto">
-        <motion.h2 
+        <motion.h2
           className="section-heading-premium"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -101,12 +101,12 @@ const CompetitiveStats: React.FC = () => {
         >
           Competitive Programming Stats
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {platformsWithInfo.map((platform, index) => (
-            <GlowCard 
-              key={platform.name} 
-              delayIndex={index} 
+            <GlowCard
+              key={platform.name}
+              delayIndex={index}
               intensity="high"
               className="comp-card"
             >
@@ -121,7 +121,7 @@ const CompetitiveStats: React.FC = () => {
                       @{platform.username}
                     </a>
                   </p>
-                  <p className="text-lg font-semibold" style={{color: platform.color}}>{platform.rating}</p>
+                  <p className="text-lg font-semibold" style={{ color: platform.color }}>{platform.rating}</p>
                 </div>
                 <div className="mb-3 h-[150px]">
                   {renderChart(platform.data, platform.color)}
