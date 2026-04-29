@@ -5,8 +5,12 @@ import HeroSection from '@/components/HeroSection';
 import TechMarquee from '@/components/TechMarquee';
 import ProjectsSection from '@/components/ProjectsSection';
 import EducationTimeline from '@/components/EducationTimeline';
+{/*
+
 import CompetitiveStats from '@/components/CompetitiveStats';
 import BlogSection from '@/components/BlogSection';
+
+*/}
 import ContactSection from '@/components/ContactSection';
 
 const Index: React.FC = () => {
@@ -22,55 +26,55 @@ const Index: React.FC = () => {
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 overflow-hidden">
           {/* Main light source */}
           <div className="absolute -top-[30vh] -left-[30vh] w-[80vh] h-[80vh] rounded-full bg-radial-glow-premium opacity-60 animate-glow-pulse"></div>
-          
+
           {/* Secondary light source */}
           <div className="absolute top-[70vh] -right-[20vh] w-[50vh] h-[50vh] rounded-full bg-radial-glow-premium opacity-40 animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
-          
+
           {/* Premium light rays */}
-          <div className="light-ray-premium" style={{ 
-            top: '15vh', 
-            left: 0, 
-            width: '40vw', 
+          <div className="light-ray-premium" style={{
+            top: '15vh',
+            left: 0,
+            width: '40vw',
             transform: 'rotate(30deg)',
             opacity: 0.2
           }}></div>
-          
-          <div className="light-ray-premium" style={{ 
-            top: '35vh', 
-            left: 0, 
-            width: '60vw', 
+
+          <div className="light-ray-premium" style={{
+            top: '35vh',
+            left: 0,
+            width: '60vw',
             transform: 'rotate(15deg)',
             opacity: 0.15,
             animationDelay: '1s'
           }}></div>
-          
-          <div className="light-ray-premium" style={{ 
-            top: '65vh', 
-            left: 0, 
-            width: '50vw', 
+
+          <div className="light-ray-premium" style={{
+            top: '65vh',
+            left: 0,
+            width: '50vw',
             transform: 'rotate(-10deg)',
             opacity: 0.12,
             animationDelay: '2s'
           }}></div>
-          
+
           {/* Floating glow orbs */}
-          <div className="absolute w-[100px] h-[100px] rounded-full bg-white/5 blur-xl animate-float" style={{ 
-            top: '20vh', 
+          <div className="absolute w-[100px] h-[100px] rounded-full bg-white/5 blur-xl animate-float" style={{
+            top: '20vh',
             left: '30vw',
             animationDelay: '0s'
           }}></div>
-          
-          <div className="absolute w-[80px] h-[80px] rounded-full bg-white/5 blur-xl animate-float" style={{ 
-            top: '60vh', 
+
+          <div className="absolute w-[80px] h-[80px] rounded-full bg-white/5 blur-xl animate-float" style={{
+            top: '60vh',
             right: '25vw',
             animationDelay: '1.5s'
           }}></div>
         </div>
-        
+
         <header className="fixed w-full top-0 z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 
-              className="text-xl font-bold italic cursor-pointer" 
+            <h1
+              className="text-xl font-bold italic cursor-pointer"
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 window.history.pushState(null, "", "/#");
@@ -81,8 +85,8 @@ const Index: React.FC = () => {
             <nav>
               <ul className="flex space-x-8">
                 <li>
-                  <a 
-                    href="#projects" 
+                  <a
+                    href="#projects"
                     className="hover:text-white transition-colors relative group"
                   >
                     Projects
@@ -91,28 +95,51 @@ const Index: React.FC = () => {
                 </li>
                 <li>
                   <a
-                    href="#contact" 
+                    href="#contact"
                     className="hover:text-white transition-colors relative group"
                   >
                     Contact
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
                   </a>
                 </li>
-                <li>
-                  <a 
-                    href="/resume.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="cta-button-premium text-sm px-4 py-1"
-                  >
+                <li className="relative group">
+                  <button className="cta-button-premium text-sm px-4 py-1 flex items-center gap-1">
                     Resume
-                  </a>
+
+                    {/* Dropdown arrow */}
+                    <svg className="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Dropdown content */}
+                  <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <div className="bg-dark/90 backdrop-blur-md border border-white/10 rounded-lg shadow-xl flex flex-col overflow-hidden min-w-[140px]">
+                      <a
+                        href="/resume0.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 hover:bg-white/10 transition-colors text-sm text-white/80 hover:text-white whitespace-nowrap"
+                      >
+                        General Resume
+                      </a>
+
+                      <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-4 py-2 hover:bg-white/10 transition-colors text-sm text-white/80 hover:text-white whitespace-nowrap border-t border-white/25"
+                      >
+                        CS Resume
+                      </a>
+                    </div>
+                  </div>
                 </li>
               </ul>
             </nav>
           </div>
         </header>
-        
+
         <main className="pt-16 relative z-10">
           <HeroSection />
           <TechMarquee />
@@ -126,7 +153,7 @@ const Index: React.FC = () => {
           */}
           <ContactSection />
         </main>
-        
+
         <footer className="py-12 px-4 border-t border-white/10 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <p className="text-white/60">
