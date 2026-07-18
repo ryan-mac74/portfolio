@@ -23,6 +23,7 @@ const TechMarquee: React.FC = () => {
     { name: "MySQL", icon: <Database className={iconClass} /> },
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
     { name: "Prisma", icon: <Cpu className={iconClass} /> },
+    { name: "SQLModel", icon: <Cpu className={iconClass} /> },
   ];
 
   const techStackRow2 = [
@@ -39,6 +40,7 @@ const TechMarquee: React.FC = () => {
     { name: "VS Code", icon: <Terminal className={iconClass} /> },
     { name: "Vim", icon: <Terminal className={iconClass} /> },
     { name: "DigitalOcean", icon: <Cloud className={iconClass} /> },
+    { name: "Gemini API", icon: <Code2 className={iconClass} /> },
   ];
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {

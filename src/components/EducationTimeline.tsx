@@ -8,7 +8,6 @@ interface Education {
   degree: string;
   institution: string;
   location: string;
-  grade: string;
   link: string;
 }
 
@@ -20,7 +19,6 @@ const EducationTimeline: React.FC = () => {
       degree: "Bachelor’s in Computer Science",
       institution: "Université de Montréal (UdeM)",
       location: "Montreal, QC, Canada",
-      grade: "GPA: 3.413/4.3",
       link: "",
     },
     {
@@ -29,7 +27,6 @@ const EducationTimeline: React.FC = () => {
       degree: "Certificate of English Proficiency",
       institution: "International TEFL/TESOL Training Institute (ITTI)",
       location: "Antananarivo, Madagascar",
-      grade: "Level: C2",
       link: "/itti.pdf",
     },
   ];
@@ -86,9 +83,8 @@ const EducationTimeline: React.FC = () => {
                   </a>
                   ) {item.degree}
                 </h2>
-                <p className="text-white/80 mb-1">{item.institution}</p>
-                <p className="text-white/70 mb-1">{item.location}</p>
-                <p className="text-white/60">{item.grade}</p>
+                <p className="text-white/90 mb-1">{item.institution}</p>
+                <p className="text-white/80">{item.location}</p>
               </div>
             </motion.div>
           ))}
