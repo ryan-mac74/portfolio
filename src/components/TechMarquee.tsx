@@ -3,7 +3,8 @@ import {
   Github, Code2, Database,
   ServerCrash, Container,
   Cpu, Cloud, Terminal,
-  Paintbrush, Zap,
+  Paintbrush, Zap, Sparkles,
+  GitMerge, Network, Layers,
 } from 'lucide-react';
 
 const TechMarquee: React.FC = () => {
@@ -24,6 +25,8 @@ const TechMarquee: React.FC = () => {
     { name: "PostgreSQL", icon: <Database className={iconClass} /> },
     { name: "Prisma", icon: <Cpu className={iconClass} /> },
     { name: "SQLModel", icon: <Cpu className={iconClass} /> },
+    { name: "Alembic", icon: <Layers className={iconClass} /> },
+    { name: "Gemini API", icon: <Sparkles className={iconClass} /> },
   ];
 
   const techStackRow2 = [
@@ -35,12 +38,13 @@ const TechMarquee: React.FC = () => {
     { name: "Maven", icon: <Cpu className={iconClass} /> },
     { name: "Git", icon: <Github className={iconClass} /> },
     { name: "Github Actions", icon: <Github className={iconClass} /> },
-    { name: "Nginx", icon: <ServerCrash className={iconClass} /> },
+    { name: "CI/CD", icon: <GitMerge className={iconClass} /> },
     { name: "Docker", icon: <Container className={iconClass} /> },
+    { name: "Nginx", icon: <ServerCrash className={iconClass} /> },
+    { name: "DigitalOcean", icon: <Cloud className={iconClass} /> },
     { name: "VS Code", icon: <Terminal className={iconClass} /> },
     { name: "Vim", icon: <Terminal className={iconClass} /> },
-    { name: "DigitalOcean", icon: <Cloud className={iconClass} /> },
-    { name: "Gemini API", icon: <Code2 className={iconClass} /> },
+    { name: "UML", icon: <Network className={iconClass} /> },
   ];
 
   const renderMarqueeItems = (items: Array<{ name: string; icon: React.ReactNode }>) => {

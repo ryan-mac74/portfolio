@@ -17,7 +17,7 @@ const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      years: "February 2026 - Present",
+      years: "February 2026 - Present (on hold)",
       logo: "/nowsworld.png",
       title: "NowSWorld",
       description:
@@ -30,6 +30,19 @@ const ProjectsSection: React.FC = () => {
         "The goal is to make something different from existing platforms.",
       techStack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Express", "Node.js", "Prisma", "PostgreSQL"],
       url: "https://www.nowsworld.com",
+    },
+    {
+      id: 2,
+      years: "May 2026 - Present (ongoing)",
+      logo: "/nowsspace.png",
+      title: "NowSSpace",
+      description:
+        "A real-time synchronization platform providing a way for people to spend time together " +
+        "on the internet (accross any website) relying on specific features behind the scenes.\n" +
+        "It's mainly built to connect users in shared virtual rooms with live activity (click, cursor, hover, page, scroll) tracking, " +
+        "with an integrated chat system out of the box.",
+      techStack: ["Docker", "FastAPI", "Redis", "Alembic", "SQLModel", "PostgreSQL", "Next.js", "Tailwind CSS"],
+      url: "https://www.nowsspace.com",
     },
   ];
 
