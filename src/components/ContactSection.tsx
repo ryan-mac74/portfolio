@@ -7,8 +7,8 @@ import emailjs from '@emailjs/browser';
 const ContactSection: React.FC = () => {
   const LINKEDIN_URL = "https://linkedin.com/in/ryan-ramaherison-mac-way-kit-bb7244351";
   const GITHUB_URL = "https://github.com/ryan-mac74";
-  const PERSONAL_EMAIL = "ryan.mac.rm4@gmail.com";
-  const PHONE_NUMBER = "14389262702";
+  const WA_ACCOUNT = "https://wa.me/message/D6Z57GQWE54XI1";
+  const EMAIL_ADDRESS = "ryan.mac.rm4@gmail.com";
 
   const [formData, setFormData] = useState({
     name: '',
@@ -37,7 +37,7 @@ const ContactSection: React.FC = () => {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: PERSONAL_EMAIL,
+        to_email: EMAIL_ADDRESS,
       },
       'IXFH47cUfkSLXooAS',
     )
@@ -187,7 +187,7 @@ const ContactSection: React.FC = () => {
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
                 <a
-                  href={`https://wa.me/${PHONE_NUMBER}`}
+                  href={WA_ACCOUNT}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
@@ -203,10 +203,10 @@ const ContactSection: React.FC = () => {
               <div className="text-center relative z-10">
                 <p className="text-white/70 mb-1">Or Email me at:</p>
                 <a
-                  href={`mailto:${PERSONAL_EMAIL}`}
+                  href={`mailto:${EMAIL_ADDRESS}`}
                   className="text-white hover:underline hover:text-white/90 transition-colors relative group"
                 >
-                  {PERSONAL_EMAIL}
+                  {EMAIL_ADDRESS}
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/50 group-hover:w-full transition-all duration-300"></span>
                 </a>
               </div>
