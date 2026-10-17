@@ -16,8 +16,17 @@ interface Project {
 const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
-      id: 1,
-      years: "May 2026 - Present (ongoing)",
+      id: 3,
+      years: "November 2026 - Present (ongoing)",
+      logo: "/callsmoney.png",
+      title: "CallSMoney",
+      description: "",
+      techStack: ["Docker", "FastAPI", "Redis", "Alembic", "SQLModel", "PostgreSQL", "Next.js", "Tailwind CSS"],
+      url: "https://callsmoney.com",
+    },
+    {
+      id: 2,
+      years: "May 2026 - Present (on hold)",
       logo: "/nowsspace.png",
       title: "NowSSpace",
       description:
@@ -26,10 +35,10 @@ const ProjectsSection: React.FC = () => {
         "It's mainly built to connect users in shared virtual rooms with live activity (click, cursor, hover, page, scroll) tracking, " +
         "with an integrated chat system out of the box.",
       techStack: ["Docker", "FastAPI", "Redis", "Alembic", "SQLModel", "PostgreSQL", "Next.js", "Tailwind CSS"],
-      url: "https://www.nowsspace.com",
+      url: "https://nowsspace.com",
     },
     {
-      id: 2,
+      id: 1,
       years: "February 2026 - Present (on hold)",
       logo: "/nowsworld.png",
       title: "NowSWorld",
@@ -42,7 +51,7 @@ const ProjectsSection: React.FC = () => {
         "make new connection through unique features and a modern UI.\n" +
         "The goal is to make something different from existing platforms.",
       techStack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Express", "Node.js", "Prisma", "PostgreSQL"],
-      url: "https://www.nowsworld.com",
+      url: "https://nowsworld.com",
     },
   ];
 
