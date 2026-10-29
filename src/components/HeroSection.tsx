@@ -56,7 +56,7 @@ const HeroSection: React.FC = () => {
               custom={0}
               variants={textVariants}
             >
-              Hey! I'm Ryan Mac <br />
+              Hey, I'm Ryan Mac <br />
               ------- <br />
             </motion.span>{" "}
             <motion.span

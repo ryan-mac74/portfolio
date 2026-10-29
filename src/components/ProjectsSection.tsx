@@ -148,7 +148,7 @@ const ProjectsSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-sm text-white/70 hover:text-white group-hover:text-white/90 transition-colors relative mt-auto"
                   >
-                    <span>Try it out</span>
+                    <span>{project.url}</span>
                     <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/30 group-hover:w-full transition-all duration-300"></span>
                   </a>
