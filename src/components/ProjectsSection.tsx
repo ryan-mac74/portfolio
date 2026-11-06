@@ -35,7 +35,7 @@ const ProjectsSection: React.FC = () => {
         "It's mainly built to connect users in shared virtual rooms with live activity (click, cursor, hover, page, scroll) tracking, " +
         "with an integrated chat system out of the box.",
       techStack: ["Docker", "FastAPI", "Redis", "Alembic", "SQLModel", "PostgreSQL", "Next.js", "Tailwind CSS"],
-      url: "https://nowsspace.com",
+      url: "https://nowsspace-ui.onrender.com",
     },
     {
       id: 1,
@@ -51,7 +51,7 @@ const ProjectsSection: React.FC = () => {
         "make new connection through unique features and a modern UI.\n" +
         "The goal is to make something different from existing platforms.",
       techStack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Express", "Node.js", "Prisma", "PostgreSQL"],
-      url: "https://nowsworld.com",
+      url: "https://nowsworld-client.vercel.app",
     },
   ];
 

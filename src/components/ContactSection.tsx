@@ -8,7 +8,7 @@ import emailjs from '@emailjs/browser';
 const ContactSection: React.FC = () => {
   const LINKEDIN_URL = "https://linkedin.com/in/ryan-ramaherison-mac-way-kit-bb7244351";
   const GITHUB_URL = "https://github.com/ryan-mac74";
-  const WA_ACCOUNT = "https://wa.me/message/D6Z57GQWE54XI1";
+  const WHATSAPP_URL = "https://wa.me/message/D6Z57GQWE54XI1";
   const DISCORD_URL = "https://discordapp.com/users/1334370345133674578";
   const INSTAGRAM_URL = "https://instagram.com/nowsryan";
   const EMAIL_ADDRESS = "ryan.mac.rm4@gmail.com";
@@ -157,7 +157,7 @@ const ContactSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="self-center"
           >
-            <div className="glow-card p-8 flex flex-col items-center relative overflow-hidden group">
+            <div className="glow-card p-14 flex flex-col items-center relative overflow-hidden group">
               {/* Inner highlight effect */}
               <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
               <div className="absolute -top-[150px] -right-[150px] w-[300px] h-[300px] bg-white/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -190,7 +190,7 @@ const ContactSection: React.FC = () => {
                   <div className="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 blur-md -z-10 transition-opacity"></div>
                 </a>
                 <a
-                  href={WA_ACCOUNT}
+                  href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 border border-dark-200 rounded-full hover:border-white/40 transition-all hover:scale-110 group"
