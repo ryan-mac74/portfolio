@@ -8,7 +8,7 @@ interface Project {
   years: string;
   logo?: string;
   title: string;
-  description: string;
+  description: React.ReactNode;
   techStack: string[];
   url: string;
 }
@@ -16,7 +16,7 @@ interface Project {
 const ProjectsSection: React.FC = () => {
   const projects: Project[] = [
     {
-      id: 3,
+      id: 4,
       years: "November 2026 - Present (ongoing)",
       logo: "/callsmoney.png",
       title: "CallSMoney",
@@ -25,12 +25,12 @@ const ProjectsSection: React.FC = () => {
       url: "https://callsmoney.com",
     },
     {
-      id: 2,
-      years: "May 2026 - Present (on hold)",
+      id: 3,
+      years: "May 2026 - August 2026",
       logo: "/nowsspace.png",
       title: "NowSSpace",
       description:
-        "A real-time synchronization platform providing a way for people to spend time together " +
+        "A real-time Synchronization Platform providing a way for people to spend time together " +
         "on the internet (accross any website) relying on specific features behind the scenes.\n" +
         "It's mainly built to connect users in shared virtual rooms with live activity (click, cursor, hover, page, scroll) tracking, " +
         "with an integrated chat system out of the box.",
@@ -38,8 +38,8 @@ const ProjectsSection: React.FC = () => {
       url: "https://nowsspace-ui.onrender.com",
     },
     {
-      id: 1,
-      years: "February 2026 - Present (on hold)",
+      id: 2,
+      years: "February 2026 - June 2026",
       logo: "/nowsworld.png",
       title: "NowSWorld",
       description:
@@ -52,6 +52,42 @@ const ProjectsSection: React.FC = () => {
         "The goal is to make something different from existing platforms.",
       techStack: ["React", "Vite", "TypeScript", "Tailwind CSS", "Express", "Node.js", "Prisma", "PostgreSQL"],
       url: "https://nowsworld-client.vercel.app",
+    },
+    {
+      id: 1,
+      years: "January 2026 - Present (on hold)",
+      logo: "/portfolio.png",
+      title: "Portfolio",
+      description: (
+        <>
+          This project is based on and inspired by the following open-source repository:<br />
+          <strong>
+            <a
+              href="https://github.com/0xReso/PortfolioTemplate"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              PortfolioTemplate
+            </a>
+          </strong>{" by "}
+          <strong>
+            <a
+              href="https://github.com/0xReso"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              Ayush Raghuvanshi
+            </a>
+          </strong><br /><br />
+
+          The original project provided the foundation for this new project.<br />
+          This repository includes modifications, extensions, and personal improvements made for my own purposes.
+        </>
+      ),
+      techStack: ["React", "Vite", "TypeScript", "Tailwind CSS"],
+      url: "https://ryanmacwaykit.com",
     },
   ];
 
@@ -122,14 +158,20 @@ const ProjectsSection: React.FC = () => {
                     <div className="flex items-center gap-3">
                       {project.logo && (
                         <div className="w-10 h-10 flex items-center justify-center p-1 shrink-0">
-                          <img src={project.logo} alt="LOGO" className="w-full h-full object-contain" />
+                          <img src={project.logo} alt="?" className="w-full h-full object-contain" />
                         </div>
                       )}
-                      <h3 className="text-2xl font-bold italic group-hover:text-white transition-colors">{project.title}</h3>
+                      <h3 className="text-2xl font-bold italic group-hover:text-white transition-colors">
+                        {project.title}
+                      </h3>
                     </div>
-                    <span className="text-white/100 text-sm">{project.years}</span>
+                    <span className="text-white/100 text-sm">
+                      {project.years}
+                    </span>
                   </div>
-                  <p className="text-white/70 mb-6 group-hover:text-white/90 transition-colors whitespace-pre-line">{project.description}</p>
+                  <p className="text-white/70 mb-6 group-hover:text-white/90 transition-colors whitespace-pre-line">
+                    {project.description}
+                  </p>
 
                   <div className="flex flex-wrap gap-2 mb-6 mt-auto">
                     {project.techStack.map((tech, i) => (

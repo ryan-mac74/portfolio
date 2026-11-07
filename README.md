@@ -1,7 +1,4 @@
-# 🚀 Portfolio Template
-
-A sleek, modern portfolio template built with React + Vite, Tailwind CSS, and Framer Motion.
-This template features a stunning black and white design with smooth animations and a polished UI.
+# 🚀 My Portfolio
 
 ## ✨ Features
 
@@ -60,7 +57,7 @@ This project is licensed under the MIT License - see the **[LICENSE](LICENSE)** 
 
 This project is based on and inspired by the following open-source repository:
 
-- **[PortfolioTemplate](https://github.com/ResorcinolWorks/PortfolioTemplate)** by _[Ayush Raghuvanshi](https://github.com/ResorcinolWorks)_
+- **[PortfolioTemplate](https://github.com/0xReso/PortfolioTemplate)** by _[Ayush Raghuvanshi](https://github.com/0xReso)_
 
 The original project provided the foundation for this new project.
 This repository includes modifications, extensions, and personal improvements made for my own purposes.
